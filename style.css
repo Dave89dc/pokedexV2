@@ -1,0 +1,21 @@
+.pokemon-img {
+    width: 70px;
+}
+
+summary{
+    display: flex;
+    align-items: center;
+}
+
+details {
+    width: 90%;
+    margin: auto;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 4px;
+}
+
+.spacer {
+    flex-grow: 1;
+}
