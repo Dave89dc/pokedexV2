@@ -1,5 +1,8 @@
+
+
 .pokemon-img {
     width: 70px;
+    margin: 0px 15px;
 }
 
 summary{
@@ -8,12 +11,25 @@ summary{
 }
 
 details {
-    width: 40%;
+    width: 50%;
     margin: auto;
     border: 2px solid black;
-    padding: 10px;
+    padding: 10px 30px;
     border-radius: 5px;
-    margin-bottom: 4px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+details:hover {
+    width: 56%;
+    height: auto + 75px;
+    padding: 20px;
+    font-weight: bold;
+    font-size: larger;
+}
+
+details:hover .pokemon-img {
+    width: 85px;
 }
 
 .spacer {

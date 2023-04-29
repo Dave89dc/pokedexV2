@@ -1,13 +1,15 @@
 class PokeService{
 
-    static PAGE_COUNT = 20;
     static BASE_URL = 'https://pokeapi.co/api/v2/';
+    static PAGE_LIMIT = 9;
+    static POKEMON_NUMBER = 1281;
+    static PAGE_COUNT = Math.ceil(this.POKEMON_NUMBER / this.PAGE_LIMIT)
 
     static getPage(index) {
         const url = this.BASE_URL + 'pokemon?limit=' 
-                                  + this.PAGE_COUNT 
+                                  + this.PAGE_LIMIT 
                                   + '&offset=' 
-                                  + (this.PAGE_COUNT * index);
+                                  + (this.PAGE_LIMIT * index);
         return fetch(url)
             .then(resp => resp.json())
             .then(pokemonPage => this.getDetails(pokemonPage.results));
